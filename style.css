@@ -6,80 +6,74 @@
     font-family: "Poppins", sans-serif;
 }
 body{
-    background-color: #000;
-    height: 100vh;
-}
-
-.interface{
-    max-width: 1280px;
-    margin: 0 auto;
+    background: radial-gradient(circle, #000000, #002244, #004488);
+    height: 100px;
 }
 
 .flex{
     display: flex;
 }
 
-.btn-contato button{
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #FF007F; 
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .2s;
-}
-
-h2.titulo{
-    color: #fff;
-    font-size: 38px;
-    text-align: center;
-}
-
-h2.titulo span{
-    color: #FF007F; 
-}
-
 /* ESTILO CABEÇALHO */
-header{
-    padding: 40px 4%;
-}
-
-header > .interface{
+nav {
+    background: rgba(0, 34, 68, 0.8);
+    padding: 15px 4%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: 1000;
 }
 
-header a{
-    color: #5C5C5C;
-    text-decoration: none;
-    display:inline-block;
-    transition: .2s;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
-header a:hover{
-    color: #ffff;
-    transform: scale(1.05);
-}
-
-header nav ul{
-    list-style-type: none;
-}
-
-header nav ul li{
+nav ul li {
     display: inline-block;
-    padding: 0 40px;
 }
 
-.btn-contato button:hover{
-    box-shadow: 0px 0px 8px #6d3952; 
-    transform: scale(1.05);
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
 }
+
+nav ul li a:hover {
+    color: #00aaff;
+    transform: scale(1.1);
+}
+
+nav.scrolled {
+    background: rgba(0, 34, 68, 0.95);
+    padding: 10px 4%;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 
 /*  ESTILO TOPO SITE */
 section.topo-do-site{
     padding: 40px 4%;
+    margin-top: 80px;
 }
 
 section.topo_do-site .flex{
@@ -105,38 +99,6 @@ section.topo_do-site .flex{
     border-radius: 50%; 
 }
 
-/*  ESTILO ESPECIALIDADES */
-section.especialidades{
-    padding: 40px 4%;
-}
-
-section.especialidades .flex{
-    gap: 60px;
-}
-
-.especialidades .especialidades-box{
-    color: #fff;
-    padding: 40px;
-    border: 2px solid #fff;
-    margin-top: 45px;
-    border-radius: 20px;
-    transition: .2s;
-}
-
-.especialidades .especialidades-box:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #5a5a5a;
-}
-
-.especialidades .especialidades-box i{
-    font-size: 70px;
-    color: #FF007F; 
-}
-
-.especialidades .especialidades-box h3{
-    font-size: 28px;
-    margin: 15px 0;
-}
 
 /* ESTILO PROJETOS */
 section.projetos {
@@ -157,16 +119,12 @@ section.projetos {
 }
 
 .projetos a {
-    color: #FF007F; 
+    color: #fff; 
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
 }
 
-.projetos a:hover {
-    text-decoration: underline;
-    color: #ffffff;
-}
 
 section.projetos .flex {
     justify-content: center;
@@ -181,11 +139,12 @@ section.projetos .flex {
     width: 250px;
     text-align: center;
     transition: 0.3s ease;
+    margin-top: 30px;
 }
 
 .projetos .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(255, 0, 127, 0.3); 
+    box-shadow: 0px 0px 15px #fff; 
 }
 
 .projetos .project-card h3 {
@@ -201,7 +160,7 @@ section.projetos .flex {
 }
 
 .projetos .project-card a {
-    color: #FF007F;
+    color: #fff;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -219,17 +178,3 @@ section.projetos .flex {
 }
 
 
-.github-btn {
-    background-color: #24292f;
-    color: white; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    border-radius: 5px; 
-    text-decoration: none; 
-    display: inline-block; 
-    transition: background-color 0.3s ease; 
-}
-
-.github-btn:hover {
-    background-color: #333; 
-}
